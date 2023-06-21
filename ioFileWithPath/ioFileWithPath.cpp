@@ -38,3 +38,21 @@ int main() {
 	infile.open(Namafile, ios::in);
 
 	cout << endl << ">= Membuka dan membaca file " << endl;
+	//jika file ada maka
+	if (infile.is_open())
+	{
+		//Melakukan perulangan setiap baris
+		while (getline(infile, baris))
+		{
+			// dan tampilkan di sini
+			cout << baris << '\n';
+		}
+		//tutup file  tersebut setelah selesai
+		infile.close();
+	}
+	//jika tidak ditemukan file makan akan menampilkan hasil 
+	else cout << "unable to open file";
+	return 0;
+
+
+}
