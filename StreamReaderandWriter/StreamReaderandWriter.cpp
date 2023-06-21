@@ -33,7 +33,16 @@ int main() {
 
 	cout << endl << ">= Membuka dan membaca file " << endl;
 	//jika file ada maka
-	if(infile.is_open())
+	if (infile.is_open())
+	{
+		//Melakukan perulangan setiap baris
+		while (getline(infile, baris))
+		{
+			// dan tampilkan di sini
+			cout << baris << '\n';
+		}
+
+	}
 
 
 }
