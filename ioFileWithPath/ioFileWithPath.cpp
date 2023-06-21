@@ -30,3 +30,11 @@ int main() {
 	}
 	// selesai dalam mwenulis sekarang tutup file
 	outfile.close();
+
+	//Membuka file dalam mode membaca
+	ifstream infile;
+
+	//menunjuk ke sebah file
+	infile.open(Namafile, ios::in);
+
+	cout << endl << ">= Membuka dan membaca file " << endl;
