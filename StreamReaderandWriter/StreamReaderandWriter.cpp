@@ -23,6 +23,19 @@ int main() {
 		//Menulis dan memasukkan nilai dari 'baris' ke dalam file
 		outfile << baris << endl;
 	}
+	// selesai dalam mwenulis sekarang tutup file
+	outfile.close();
+
+	//Membuka file dalam mode membaca
+	ifstream infile;
+	//menunjuk ke sebah file
+	infile.open("contohFile.txt");
+
+	cout << endl << ">= Membuka dan membaca file " << endl;
+	//jika file ada maka
+	if(infile.is_open())
+
 
 }
+
 
