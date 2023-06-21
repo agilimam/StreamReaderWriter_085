@@ -44,7 +44,7 @@ int main() {
 		//tutup file  tersebut setelah selesai
 		infile.close();
 	}
-	//jika tidak ditemukan file makan= akan menampilkan hasil 
+	//jika tidak ditemukan file makan akan menampilkan hasil 
 	else cout << "unable to open file";
 	return 0;
 
