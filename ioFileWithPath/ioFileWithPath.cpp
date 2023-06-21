@@ -5,15 +5,28 @@ using namespace std;
 
 int main() {
 	string baris;
-	string Namafie;
+	string Namafile;
 
 	cout << "Masukkan Nama File : ";
-	cin >> Namafie;
+	cin >> Namafile;
 
 	//Membuka file dalam mode menulis
 	ofstream outfile;
 	//menunjuk ke sebuah nama file
-	outfile.open(Namafie + ".txt", ios::out);
+	outfile.open(Namafile + ".txt", ios::out);
 
 	cout << ">= Menulis file, \'q\' untuk keluar" << endl;
-}
+
+
+	//unlimited loop untuk menulis
+	while (true) {
+		cout << "- ";
+		//Mendapatkan setiap karekter dalam satu baris
+		getline(cin, baris);
+		//loop akan berhenti jika memasukkan karakter q
+		if (baris == "q")break;
+		//Menulis dan memasukkan nilai dari 'baris' ke dalam file
+		outfile << baris << endl;
+	}
+	// selesai dalam mwenulis sekarang tutup file
+	outfile.close();
